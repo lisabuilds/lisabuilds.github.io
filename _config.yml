@@ -1,7 +1,7 @@
 
 title: Lisa Zhang
 description: Your Profile Website
-baseurl: "/lisa" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol
 github_username: lisabuilds
 twitter_username: BadDogBobby
