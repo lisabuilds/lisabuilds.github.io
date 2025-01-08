@@ -1,0 +1,17 @@
+
+title: Lisa Zhang
+description: Your Profile Website
+baseurl: "/lisa" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol
+github_username: lisabuilds
+twitter_username: BadDogBobby
+linkedin_username: lisa-zhang-builds
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  sass_dir: _sass
+  style: compressed

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    {% seo %}
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-nav">
+                <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+                <nav>
+                    <a href="{{ '/about' | relative_url }}">About</a>
+                    <a href="{{ '/projects' | relative_url }}">Projects</a>
+                </nav>
+            </div>
+            <div class="social-links">
+                {% if site.github_username %}
+                <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">
+                    <i data-feather="github"></i>
+                </a>
+                {% endif %}
+                {% if site.twitter_username %}
+                <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener">
+                    <i data-feather="twitter"></i>
+                </a>
+                {% endif %}
+                {% if site.linkedin_username %}
+                <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">
+                    <i data-feather="linkedin"></i>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <!-- <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+    </footer> -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <span>Let's talk:</span>
+            <a href="mailto:lisazhangbuilds@gmail.com">lisazhangbuilds@gmail.com</a>
+            <span>·</span>
+            <span>(202) 680-9231</span>
+            <span>·</span>
+            <span>San Francisco, CA / Bethesda, MD</span>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-social">
+                {% if site.github_username %}
+                <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">
+                    <i data-feather="github"></i>
+                </a>
+                {% endif %}
+                {% if site.twitter_username %}
+                <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener">
+                    <i data-feather="twitter"></i>
+                </a>
+                {% endif %}
+                {% if site.linkedin_username %}
+                <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">
+                    <i data-feather="linkedin"></i>
+                </a>
+                {% endif %}
+            </div>
+            <span>·</span>
+            <p class="copyright">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            feather.replace();
+        });
+    </script>
+</body>
+
+</html>
