@@ -7,9 +7,26 @@ $title-color: #7C3AED;
 $footer-bg: #F3F4F6;
 $border-color: #E5E7EB;
 
+// Mixin definition moved to the top so it's available for later usage
+@mixin tag-style {
+    background-color: rgba($header-purple, 0.1);
+    color: $title-color;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
 // Base styles
 html,
 body {
+    /* Ensure these elements fill the whole viewport height */
+    min-height: 100vh;
     height: 100%;
     margin: 0;
 }
@@ -175,22 +192,22 @@ header {
     
         .tech-stack {
             display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
+            gap: 2rem;
+            margin-bottom: 2rem;
+
+            .tag-section {
+                flex: 1;
+            }
+
+            .tag-section h3 {
+                font-size: 1.25rem;
+                font-weight: 700;
+                color: $title-color;
+                margin-bottom: 0.75rem;
+            }
 
             .tag {
-                background-color: rgba($header-purple, 0.1);
-                color: $title-color;
-                padding: 0.5rem 1rem;
-                border-radius: 2rem;
-                font-size: 0.875rem;
-                font-weight: 500;
-                transition: transform 0.2s ease;
-
-                &:hover {
-                    transform: scale(1.05);
-                }
+                @include tag-style;
             }
         }
 
@@ -279,6 +296,13 @@ header {
     }
 }
 
+.project-links .github-link {
+    @include tag-style;
+    display: inline-flex;   // Ensure icon and text are aligned
+    align-items: center;
+    gap: 0.5rem;            // Add some space between icon and text
+    text-decoration: none;  // Maintain a button-like appearance
+}
 
 // Footer
 footer {
@@ -353,4 +377,23 @@ footer {
             margin: 0;
         }
     }
+}
+
+// Add this somewhere after your other project-related styles
+.project-meta {
+  display: flex;
+  justify-content: space-between; // pushes children to the far left and far right
+  align-items: center;
+  margin-top: 1rem; // optional spacing adjustment
+}
+
+/* New wrapper for sticky footer */
+.site-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }

@@ -10,25 +10,19 @@ title: Projects
             
             <div class="projects">
                 <div class="project-card">
-                    <h3>LLaMA-3 Fine-tuning with RLHF</h3>
-                    <p>Enhanced underwriting accuracy by 30% through distributed fine-tuning of LLaMA-3-70B using reinforcement learning from human feedback. Built model inference endpoints with FastAPI and streamlined deployment on Kubernetes.</p>
-                    <div class="tech-stack">
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">RLHF</span>
-                        <span class="tag">Kubernetes</span>
+                    <h3>Comparisons of a few RL learning algorithms in nonstationary bandit setting</h3>
+                    <p></p>
+                    <div class="project-meta">
+                        <div class="tech-stack">
+                            <span class="tag">Jax</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="tag github-link" href="https://github.com/username/myproject" target="_blank" rel="noopener noreferrer">
+                                <i data-feather="github"></i> GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <h3>Multi-Agent Processing System</h3>
-                    <p>Built a distributed multi-agent system orchestrated by Kafka to automate risk assessments and quote generation, processing over 10,000 submissions weekly in near real-time.</p>
-                    <div class="tech-stack">
-                        <span class="tag">Ray</span>
-                        <span class="tag">Kafka</span>
-                    </div>
-                </div>
-                
-                
             </div>
         </div>
     </div>
